@@ -18,7 +18,7 @@ const Index = () => {
       id: 1,
       name: 'Урбан Худи',
       price: 3490,
-      image: '/img/bb9b0340-7ce1-4be0-bc7e-46c5843bb7f7.jpg',
+      icon: 'Shirt',
       brand: 'StreetStyle',
       colors: ['Черный', 'Белый', 'Серый'],
       sizes: ['XS', 'S', 'M', 'L', 'XL'],
@@ -28,7 +28,7 @@ const Index = () => {
       id: 2,
       name: 'Тренд Футболка',
       price: 1990,
-      image: '/img/bb9b0340-7ce1-4be0-bc7e-46c5843bb7f7.jpg',
+      icon: 'Shirt',
       brand: 'YouthFlex',
       colors: ['Розовый', 'Мятный', 'Желтый'],
       sizes: ['XS', 'S', 'M', 'L'],
@@ -38,7 +38,7 @@ const Index = () => {
       id: 3,
       name: 'Стайл Кроссовки',
       price: 5990,
-      image: '/img/bb9b0340-7ce1-4be0-bc7e-46c5843bb7f7.jpg',
+      icon: 'Footprints',
       brand: 'FreshKicks',
       colors: ['Белый', 'Черный', 'Мульти'],
       sizes: ['36', '37', '38', '39', '40', '41', '42', '43'],
@@ -48,7 +48,7 @@ const Index = () => {
       id: 4,
       name: 'Деним Джинсы',
       price: 4490,
-      image: '/img/bb9b0340-7ce1-4be0-bc7e-46c5843bb7f7.jpg',
+      icon: 'Shirt',
       brand: 'DenimCrew',
       colors: ['Синий', 'Черный', 'Серый'],
       sizes: ['26', '28', '30', '32', '34', '36'],
@@ -58,7 +58,7 @@ const Index = () => {
       id: 5,
       name: 'Винтаж Куртка',
       price: 6990,
-      image: '/img/bb9b0340-7ce1-4be0-bc7e-46c5843bb7f7.jpg',
+      icon: 'Coat',
       brand: 'RetroVibes',
       colors: ['Коричневый', 'Зеленый', 'Черный'],
       sizes: ['S', 'M', 'L', 'XL'],
@@ -68,7 +68,7 @@ const Index = () => {
       id: 6,
       name: 'График Свитшот',
       price: 2990,
-      image: '/img/bb9b0340-7ce1-4be0-bc7e-46c5843bb7f7.jpg',
+      icon: 'Shirt',
       brand: 'GraphicTee',
       colors: ['Белый', 'Черный', 'Розовый'],
       sizes: ['XS', 'S', 'M', 'L', 'XL'],
@@ -273,12 +273,8 @@ const Index = () => {
             {filteredProducts.map((product) => (
               <Card key={product.id} className="bg-white/90 backdrop-blur-lg hover:scale-105 transition-all duration-300 animate-fade-in">
                 <CardHeader className="p-0">
-                  <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-t-lg flex items-center justify-center overflow-hidden">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                    />
+                  <div className="aspect-square bg-gradient-to-br from-[#FF6B6B]/20 to-[#4ECDC4]/20 rounded-t-lg flex items-center justify-center overflow-hidden">
+                    <Icon name={product.icon} size={48} className="text-[#FF6B6B]" />
                   </div>
                 </CardHeader>
                 <CardContent className="p-4">
